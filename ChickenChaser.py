@@ -78,10 +78,8 @@ def draw_intro_screen():
             quit_program(event)
 
         # Controls chicken's movement
-        if chick_x > xDisplay * 0.65:
-            chick_dir = False
-        elif chick_x < xDisplay * 0.1875:
-            chick_dir = True
+        if chick_x > xDisplay * 0.65 or chick_x < xDisplay * 0.1875:
+            chick_dir = not chick_dir
 
         if chick_dir:
             chick_x += 5
